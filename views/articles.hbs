@@ -1,0 +1,32 @@
+<div class="page-inverted reveal-on-scroll">
+    <div class="main-container px-3 text-center">
+        <h1 class="service-page-title">ARTICLES</h1>
+        <p class="lead text-white-50 mb-0">Temukan inspirasi dan wawasan untuk pertumbuhan diri Anda</p>
+    </div>
+</div>
+
+<div class="service-feature-section">
+    <div class="container">
+        <div class="article-list reveal-on-scroll">
+            {{#each articles}}
+            <a href="/articles/{{this.id}}" class="article-preview">
+                <div class="article-img-wrapper">
+                    <img src="{{this.imageUrl}}" alt="{{this.title}}" class="img-fluid">
+                </div>
+                <div class="article-preview-content d-flex flex-column h-100">
+                    <div class="article-meta mb-2">
+                        <span class="badge-custom">Artikel</span>
+                        <span class="read-time"><i class="far fa-clock me-1"></i> 5 Min Read</span>
+                    </div>
+                    <h2>{{this.title}}</h2>
+                    <p class="flex-grow-1">{{this.snippet}}</p>
+                    <div class="article-read-more mt-4">
+                        <span>Baca Selengkapnya</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </div>
+                </div>
+            </a>
+            {{/each}}
+        </div>
+    </div>
+</div>

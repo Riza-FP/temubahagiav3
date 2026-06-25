@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>temubahagia.id</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+<style>
+html {
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+    .psikoterapi-banner-image {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: block;
+        max-height: 750px;
+        object-fit: cover;
+    }
+    .articles-banner-image {
+        width: 100%;
+        margin-top: 0;
+        margin-bottom: 0;
+        display: block;
+        max-height: 300px;
+        object-fit: cover;
+    }
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+    body {
+        font-family: 'Nunito', sans-serif;
+        text-align: center;
+    }    h1, h2, h3, h4, h5 {
+        font-size: 2em;
+        font-weight: bold;
+    }
+    p {
+        line-height: 1.8;
+        font-size: 1.1rem;
+    }
+    .navbar-logo-img {
+        height: 100px;
+    }
+    .navbar-nav .nav-link {
+        font-family: 'Nunito', sans-serif;
+        font-weight: bold;
+        color: rgb(45, 147, 211);
+    }    .navbar-nav .nav-link:hover, .navbar-nav .nav-link:focus {
+        color: black;
+    }
+    .navbar-nav .nav-item {
+        margin-left: 2.6rem;
+    }
+    .dropdown-menu .dropdown-item {
+        color: rgb(45, 147, 211);
+        font-weight: bold;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
+    }
+    .dropdown-menu .dropdown-item:hover,
+    .dropdown-menu .dropdown-item:focus,
+    .dropdown-menu .dropdown-item:active,
+    .dropdown-menu .dropdown-item.active {
+        color: black;
+        background-color: #f1f1f1;
+    }
+    .navbar-nav .dropdown-toggle:focus {
+        box-shadow: none;
+    }
+    .dropdown-menu {
+        border: none;
+    }
+    .dropdown-toggle::after {
+        display: none;
+    }
+    #contact-form {
+        margin: 0 auto;
+        display:flex;
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        gap: 0.1em;
+        text-align: left;
+        flex: 1;
+        min-width: 250px;
+        max-width: 350px;
+    }
+    #contact-form label,
+    #contact-form input {
+        width: 100%;
+        margin-bottom: 2em;
+    }
+    #contact-form input {
+        width: 100%;
+        margin-bottom: 2em;
+        font-size: 1.1em;
+        padding: 0.8em;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+        box-sizing: border-box;
+        transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    #contact-form input:focus {
+        outline: none;
+        border-color: rgb(76, 164, 219);
+        box-shadow: 0 0 5px rgba(76, 164, 219, 0.5);
+    }
+    .contact-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 6em; /* Increased gap */
+        max-width: 1000px;
+        margin: 0 auto;
+        background: none; /* remove background here */
+        border-radius: 0; /* remove border-radius here */
+        box-shadow: none; /* remove box-shadow here */
+        padding: 0;
+    }    .contact-info {
+        min-width: 200px;
+        max-width: 250px;
+        flex: 1;
+        text-align: left;
+        padding-left: 1em;     /* adds space from the left edge */
+    }
+    .full-width-hero-background {
+        width: 100%;
+        background-image: url('img/happy.jpg');
+        background-size: cover;
+        background-position: center;
+        padding: 10em 0;
+        position: relative;
+        color: white;
+    }
+
+    .full-width-hero-background::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .main-hero {
+        margin: 0 auto;
+        max-width: 700px;
+        text-align: left;
+        position: relative;
+        z-index: 1;
+    }
+
+    .full-width-hero-background .main-hero p {
+        color: white;
+    }
+    #FullService {
+        margin: 9em auto;
+        max-width: 1000px;
+    }
+    .service-item {
+        background: #f5faff;
+        border-radius: 10px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        padding: 2em 1.5em;
+        text-align: center;
+        transition: transform 0.3s ease;
+    }
+
+    .service-item:hover {
+        transform: scale(1.05);
+    }
+
+    .main-hero button {
+        padding: 0.8em 2.5em;
+        border: 1px solid white;
+        border-radius: 4px;
+        background: transparent;
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+    }
+    .main-hero button:hover {
+        background: deepskyblue;
+    }
+    #submit {
+        padding: 0.8em 2.5em;
+        border: 1px solid rgb(76, 164, 219);
+        border-radius: 4px;
+        background: rgb(76, 164, 219);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background 0.2s;
+    }
+    #submit:hover {
+        background: rgb(45, 147, 211);
+    }
+    footer {
+    width: 100%;
+    background: #f5faff; /* The light blue color */
+    padding-top: 3em;
+    padding-bottom: 4em;
+    margin-top: 0; /* Remove the margin-top */
+    color: black; /* Set default text color to black */
+}
+
+footer h1 {
+    color: rgb(45, 147, 211); /* A darker blue for the title */
+}
+
+
+
+footer .social-icons a {
+    color: rgb(45, 147, 211); /* A darker blue for the icons */
+}
+
+.footer-logo {
+    max-width: 200px;
+    margin-top: 2.5em;
+}
+
+
+
+
+    /* Dropdown container */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown button style */
+.dropbtn {
+    cursor: pointer;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1100;
+    text-align: left;
+}
+
+/* Dropdown links */
+.dropdown-content a {
+    color: rgb(45, 147, 211);
+    padding: 1em 1.5em;
+    text-decoration: none;
+    display: block;
+    font-weight: normal;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: black;
+}
+
+/* Show the dropdown on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    .service-link-btn {
+        display: inline-block;
+        margin-top: 1em;
+        padding: 0.8em 2.5em;
+        border: none;
+        border-radius: 4px;
+        background: rgb(76, 164, 219);
+        color: white;
+        font-weight: bold;
+        cursor: pointer;
+        text-decoration: none;
+        text-align: center;
+        transition: background 0.2s;
+        align-self: center;
+    }.service-link-btn:hover {
+    background: deepskyblue;
+}
+
+
+    .main-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        position: relative;
+        text-align: left;
+    }
+.hero-icon {
+    font-size: 6em;
+    color: white;
+    margin-bottom: 0.5em;
+}
+
+    .service-icon {
+    font-size: 3em;
+    margin-bottom: 1.2em;
+    color: rgb(76, 164, 219);
+}
+
+.feature-section .service-icon {
+    font-size: 2.5em;
+    color: white;
+    border-radius: 50%;
+    width: 2em;
+    height: 2em;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1em;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.terapi-section .service-icon,
+.layanan-section .service-icon,
+.keahlian-section .service-icon {
+    background-color: rgb(76, 164, 219);
+}
+    .quote {
+        font-family: 'Pacifico', cursive;
+        font-size: 2.5em;
+        color: rgb(76, 164, 219); /* Blue-ish color */
+        text-align: center;
+    }
+    
+.quote-container {
+    position: relative;
+    padding: 2em 1em;
+    margin: 4em 0;
+    text-align: center;
+}
+
+.quote-container .quote {
+    position: relative;
+    z-index: 1;
+    color: rgb(76, 164, 219);
+    font-size: 3em;
+}
+
+.quote-icon {
+    position: relative;
+    z-index: 1;
+    font-size: 4em;
+    color: rgb(76, 164, 219);
+    margin-bottom: 0.5em;
+}
+
+.inverted-section .quote-container .quote,
+.inverted-section .quote-container .quote-icon {
+    color: white;
+}    #FullService {
+        text-align: left !important;
+    }
+
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Reverted gap */
+}
+    #founder-section {
+        margin: 9em auto; /* Spacing from surrounding sections */
+        padding: 2em;
+        background-color: rgba(76, 164, 219, 0.1); /* Blue-ish background color */
+        border-radius: 10px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        max-width: 1200px; /* Align with main-container */
+        transition: transform 0.3s ease;
+    }
+#founder-section:hover {
+    transform: scale(1.05);
+}
+
+.founder-content {
+    display: flex;
+    flex-direction: column; /* Stack on small screens */
+    align-items: center;
+    gap: 3em;
+    margin-top: 3em;
+}
+
+@media (min-width: 768px) {
+    .founder-content {
+        flex-direction: row; /* Side-by-side on larger screens */
+        text-align: left;
+    }
+}
+
+.founder-image {
+    flex-shrink: 0; /* Prevent image from shrinking */
+    width: 250px; /* Fixed width for image container */
+    height: 250px; /* Fixed height for image container */
+    border-radius: 50%; /* Make it circular */
+    overflow: hidden; /* Hide overflow for circular image */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.founder-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Cover the container without distortion */
+}
+
+.founder-bio {
+    flex-grow: 1; /* Allow bio to take remaining space */
+    max-width: 750px; /* Limit bio width for readability */
+}
+
+.founder-bio h3 {
+    font-size: 2em;
+    color: rgb(45, 147, 211);
+    margin-bottom: 0.5em;
+}
+
+.founder-bio p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #555;
+}
+    .top-image {
+        max-width: 100%;
+        height: auto;
+        display: block; /* Ensures it takes up full width and allows margin auto for centering */
+        margin: 2em auto 2em auto; /* Center horizontally and add space below */
+        border-radius: 8px; /* Slightly rounded corners */
+        box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Subtle shadow */
+    }
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.article-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 8px;
+  padding: 20px;
+  text-decoration: none;
+  color: #333;
+  background-color: #f5f5f5;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.article-preview:hover {
+  background-color: #e5e5e5;
+}
+
+.article-preview img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.article-preview-content h2 {
+  margin-top: 0;
+  color: rgb(76, 164, 219);
+  font-size: 1.5em;
+}
+
+.article-list a {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.article-content {
+  white-space: pre-wrap;
+  text-align: left;
+}
+
+.author-byline {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.author-byline i {
+  font-size: 1.2em;
+  color: rgb(76, 164, 219);
+}
+
+.articles-top-image {
+  max-height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.social-icons {
+  margin-top: 20px;
+}
+
+.social-icons a {
+  color: rgb(76, 164, 219);
+  font-size: 1.5em;
+  margin-right: 15px;
+  transition: color 0.2s;
+}
+
+.social-icons a:hover {
+  color: rgb(45, 147, 211);
+}
+
+.team-members {
+  display: block;
+  margin-top: 50px;
+}
+
+.team-member-main {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.team-member-main img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5em;
+}
+
+.team-members-sub {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.team-member {
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1.5em;
+}
+
+.about-us-logo {
+  box-shadow: none;
+  max-width: 250px;
+}
+
+.team-member-main h3, .team-member h3 {
+  color: rgb(76, 164, 219);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+#lightbox-img {
+  width: 100%;
+  height: auto;
+  border-radius: 15px;
+}
+
+#lightbox-caption {
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.gallery-header-image-wrapper {
+  overflow: hidden;
+  border-radius: 15px;
+  margin-bottom: 20px;
+}
+
+.gallery-header-image {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-header-image-wrapper:hover .gallery-header-image {
+  transform: scale(1.1) rotate(3deg);
+}
+
+.gallery-description {
+  text-align: center;
+  margin-top: 20px;
+  font-style: italic;
+  color: rgb(76, 164, 219);
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+    .psikoterapi-banner-image {
+        max-height: auto;
+    }
+    .gallery-header-image {
+        height: auto;
+    }
+    #founder-section {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .main-hero,
+    .main-container {
+        max-width: 100%; /* Allow full width */
+        padding-left: 1rem;
+        padding-right: 1rem;
+        margin: 0 auto; /* Keep centered */
+    }
+    .article-list,
+    .team-members-sub {
+        grid-template-columns: 1fr; /* Force single column for grid layouts */
+        flex-direction: column; /* Force single column for flex layouts */
+        gap: 1rem; /* Adjust gap for mobile stacking */
+    }
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .team-members-sub .team-member {
+        margin-bottom: 1rem; /* Add space between stacked team members */
+    }
+
+}.feature-section {
+    padding: 4rem 2rem;
+}
+.terapi-section, .layanan-section {
+    background-color: #E7F3FF;
+}
+
+.keahlian-section {
+    background-color: white;
+}
+.feature-content {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+.feature-content.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.feature-icon-title {
+    flex: 1;
+    text-align: center;
+    max-width: 250px;
+}
+.feature-text {
+    flex: 1;
+    text-align: left;
+}
+.feature-icon-title h3 {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #333;
+    margin-top: 0.5em;
+}
+.feature-text p {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Responsive adjustments for feature sections */
+@media (max-width: 768px) {
+    .feature-content, .feature-content.reverse {
+        flex-direction: column;
+        text-align: center;
+    }
+    .feature-text {
+        text-align: center;
+    }
+}
+
+.inverted-section {
+    background: rgb(76, 164, 219);
+    color: white;
+    padding: 3rem 0;
+    text-align: center;
+}
+
+.inverted-section .service-item,
+.inverted-section #founder-section {
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.8);
+    box-shadow: none;
+    transition: background 0.3s ease, opacity 2s ease-out, transform 0.3s ease-out;
+    border-radius: 15px; /* Add border-radius for consistency */
+}
+
+.inverted-section .service-item:hover,
+.inverted-section #founder-section:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: scale(1.05);
+}
+
+.inverted-section .service-item h3,
+.inverted-section .service-item .service-icon,
+.inverted-section #founder-section h3,
+.inverted-section #founder-section .founder-bio p,
+.inverted-section #founder-section .quote {
+    color: white;
+}
+
+.inverted-section .service-item p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.inverted-section .small.text-muted {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.inverted-section .service-link-btn {
+    background: white;
+    color: rgb(76, 164, 219);
+    border: none;
+}
+.inverted-section .service-link-btn:hover {
+    background: #f0f0f0;
+    color: rgb(76, 164, 219);
+}
+
+.inverted-section > .quote {
+    color: white;
+    margin-top: 3rem;
+}
+
+.inverted-section #founder-section {
+    margin-top: 3rem; /* Add some space between sections */
+}
+
+/* Animation for revealing elements on scroll */
+.reveal-on-scroll {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease-out, transform 1s ease-out;
+}
+
+.reveal-on-scroll.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.about-page-inverted {
+    background-color: rgb(76, 164, 219);
+    color: white;
+    padding: 3em 15px;
+}
+
+.about-page-inverted h1,
+.about-page-inverted h2,
+.about-page-inverted .team-member-main h3,
+.about-page-inverted .team-member h3 {
+    color: white;
+}
+
+.about-page-inverted p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+/* The new wrapper is the circle */
+.about-page-inverted .logo-circle-wrapper {
+    background-color: white;
+    border-radius: 50%;
+    width: 220px;
+    height: 220px;
+    margin: 2em auto 4em auto; /* Keep original margins */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* Add a subtle shadow to the circle */
+}
+
+/* The logo image itself */
+.about-page-inverted .about-us-logo {
+    /* Remove styles that are now on the wrapper */
+    background-color: transparent;
+    border-radius: 0;
+    width: 68%; /* Make the image 80% of the wrapper's size */
+    height: auto;
+    padding: 0;
+    margin: 0; /* Reset margin as it's now on the wrapper */
+    box-sizing: border-box;
+}
+
+.page-inverted {
+    background-color: rgb(76, 164, 219);
+    color: white;
+    padding: 3em 15px;
+}
+
+.page-inverted h1 {
+    color: white;
+    margin-bottom: 1.5em;
+}
+
+.page-inverted p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+.page-inverted .top-image {
+    margin-top: 0;
+}
+
+.page-inverted .gallery-description {
+    color: white;
+}
+
+.page-inverted .author-byline i {
+    color: white;
+}
+
+.articles-inverted-wrapper {
+    background-color: rgb(76, 164, 219);
+    padding-top: 3em;
+    padding-bottom: 3em;
+}
+
+.articles-inverted-wrapper h1 {
+    color: white;
+    margin-bottom: 2em;
+}
+
+/* Style for article previews on the inverted articles page */
+.articles-inverted-wrapper .article-preview {
+    background-color: #f5f5f5; /* Gray background */
+    border: none; /* Remove the border */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Add drop shadow */
+}
+
+.articles-inverted-wrapper .article-preview-content h2 {
+    color: rgb(76, 164, 219); /* Blue title */
+}
+
+.articles-inverted-wrapper .article-preview-content p {
+    color: #333; /* Dark paragraph text */
+}
+
+.articles-inverted-wrapper .article-preview:hover {
+    background-color: #e5e5e5;
+    border-color: transparent; /* ensure no border on hover */
+}
+
+
+
+.about-section {
+    background-color: #e7f3ff;
+    padding: 5rem 0;
+}
+
+.about-section-gray {
+    background-color: #f8f9fa;
+    padding: 5rem 0;
+}
+
+.mission-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+}
+
+.mission-icon-wrapper {
+    flex-shrink: 0;
+    width: 3rem;
+    height: 3rem;
+    background-color: rgb(76, 164, 219);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 1.5rem;
+}
+
+.mission-icon-wrapper i {
+    font-size: 1.5rem;
+}
+
+.about-page-inverted .bg-white h5,
+.about-page-inverted .bg-white span {
+    color: #343a40; /* A dark color */
+}
+
+.service-feature-section {
+    padding: 5rem 0;
+    background-color: #e7f3ff;
+}
+
+.service-feature-section.bg-white {
+    background-color: white;
+}
+
+.feature-text .service-card-title {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: rgb(76, 164, 219);
+}
+
+.service-icon-wrapper {
+    width: 8rem;
+    height: 8rem;
+    background-color: rgb(76, 164, 219);
+    color: white;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-icon-wrapper i {
+    font-size: 4rem;
+}
+
+.service-page-title {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    font-size: 2em;
+}
+
+</style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm py-3">
+        <div class="container-fluid px-5">
+            <a class="navbar-brand ms-3" href="index.html">
+                <img src="img/temubahagiatrans.png" alt="Logo" class="navbar-logo-img">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-md-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">HOME</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">ABOUT</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            SERVICES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item" href="finding-me.html">Finding Me</a></li>
+                            <li><a class="dropdown-item" href="finding-you.html">Finding You</a></li>
+                            <li><a class="dropdown-item" href="finding-us.html">Finding Us</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="articles.html">ARTICLES</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="testimony.html">TESTIMONY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+        <div class="page-inverted reveal-on-scroll">
+    <div class="main-container px-1">
+        <div class="main-hero">
+            <img src="img/finding us.jpg" alt="Finding Us" class="top-image">
+            <h1 class="service-page-title">Finding Us: Program Pemulihan Keluarga (Family Therapy)</h1>
+        </div>
+    </div>
+</div>
+
+<div class="service-feature-section reveal-on-scroll">
+    <div class="container">
+        <div class="feature-content">
+            <div class="feature-icon-title">
+                <div class="service-icon-wrapper">
+                    <i class="fas fa-comments"></i>
+                </div>
+            </div>
+            <div class="feature-text">
+                <h3 class="service-card-title">Menemukan Harmoni dalam Perbedaan</h3>
+                <p>Masalah dan perbedaan pendapat adalah hal yang wajar dalam pernikahan, tapi jika tidak ditangani dengan
+                    baik, bisa membuat jarak dan luka di antara pasangan. Program "Finding Us" hadir
+                    untuk membantu Anda dan pasangan mengatasi masalah tersebut secara bersama-sama.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="service-feature-section bg-white reveal-on-scroll">
+    <div class="container">
+        <div class="feature-content reverse">
+            <div class="feature-icon-title">
+                <div class="service-icon-wrapper">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+            </div>
+            <div class="feature-text">
+                <h3 class="service-card-title">Penyembuhan dan Komunikasi Efektif</h3>
+                <p>
+                    Program ini dirancang khusus untuk membimbing pasangan melalui proses penyembuhan dan komunikasi
+                    yang efektif. Dengan dukungan profesional, Anda akan belajar mengenali akar konflik, mengelola emosi, dan
+                    membangun kembali kepercayaan yang mungkin mulai pudar. Fokus utama kami adalah menciptakan ruang
+                    aman agar setiap anggota keluarga dapat didengar dan dihargai. 
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="service-feature-section reveal-on-scroll">
+    <div class="container">
+        <div class="feature-content">
+            <div class="feature-icon-title">
+                <div class="service-icon-wrapper">
+                    <i class="fas fa-users"></i>
+                </div>
+            </div>
+            <div class="feature-text">
+                <h3 class="service-card-title">Memperkuat Ikatan Keluarga</h3>
+                <p>
+                    Melalui pendekatan yang penuh empati dan solusi praktis, “Finding Us” membantu memperkuat ikatan
+                    keluarga dan mengembalikan keharmonisan rumah tangga. Tidak ada masalah yang terlalu besar untuk
+                    diperbaiki selama ada kemauan untuk bersama-sama berusaha.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="inverted-section">
+    <div class="quote-container reveal-on-scroll">
+        <i class="fas fa-seedling quote-icon"></i>
+        <p class="quote">"Happiness Comes from the Roots"</p>
+    </div>
+</div>
+
+
+    <footer id="contact" class="reveal-on-scroll">
+        <div class="contact-container">
+            <div class="contact-info">
+                <h1>Contact Us</h1>
+                <p>WhatsApp:</p><p>0821 - 2335 - 8377</p>
+                <p>Email:</p><p>team.temubahagia@gmail.com</p>
+                <p>Office Address:</p><p>Jalan Kuping Gajah, No.16 (DAC 40), Cisaranten Kulon, Kec. Arcamanik, Kota Bandung, Jawa Barat, 40293</p>
+                <div class="social-icons">
+                    <a href="https://www.youtube.com/channel/UCV4G1zjSbeS6ZVtRTBbr11Q"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.facebook.com/profile.php?id=100077435064155#"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/temubahagia.id"><i class="fab fa-instagram"></i></a>
+                </div>
+                <img src="img/Filosofi logo.png" alt="Filosofi Logo" class="footer-logo">
+            </div>
+            <form id="contact-form">
+                <label for="name" style="margin-right: 8px;">Nama</label>
+                <input type="text" id="name" name="name"><br>
+                <label for="email" style="margin-right: 8px;">Email</label>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone" style="margin-right: 8px;">Nomor Handphone</label>
+                <input type="tel" id="phone" name="phone"><br>
+                <label for="help" style="margin-right: 8px;">Apa yang bisa kami bantu?</label>
+                <input type="text" id="help" name="help"><br>
+                <button type="submit" id="submit">KIRIM</button>
+            </form>
+        </div>
+    </footer>    
+    <script>
+      const form = document.getElementById('contact-form');
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const phone = document.getElementById('phone').value;
+        const help = document.getElementById('help').value;
+
+        const response = await fetch('/contact', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ name, email, phone, help }),
+        });
+
+        const result = await response.text();
+        console.log(result);
+
+        const thankYouMessage = document.createElement('div');
+        thankYouMessage.innerHTML = '<p style="text-align: center; font-size: 1.2em;">Terima kasih telah menghubungi kami! Kami akan segera menghubungi Anda.</p>';
+
+        form.replaceWith(thankYouMessage);
+      });
+    </script>
+<script>
+      const images = ;
+      let currentImageIndex;
+
+      function openLightbox(id) {
+        currentImageIndex = images.findIndex(image => image.id === id);
+        document.getElementById("lightbox").style.display = "block";
+        document.getElementById("lightbox-img").src = images[currentImageIndex].imageUrl;
+        document.getElementById("lightbox-caption").innerHTML = images[currentImageIndex].title;
+      }
+
+      function closeLightbox() {
+        document.getElementById("lightbox").style.display = "none";
+      }
+
+      function changeImage(n) {
+        currentImageIndex += n;
+        if (currentImageIndex >= images.length) {
+          currentImageIndex = 0;
+        }
+        if (currentImageIndex < 0) {
+          currentImageIndex = images.length - 1;
+        }
+        document.getElementById("lightbox-img").src = images[currentImageIndex].imageUrl;
+        document.getElementById("lightbox-caption").innerHTML = images[currentImageIndex].title;
+      }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    const revealElements = document.querySelectorAll('.reveal-on-scroll');
+
+    const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.1
+    });
+
+    revealElements.forEach(el => {
+        revealObserver.observe(el);
+    });
+});
+</script>
+</body>
+</html>
